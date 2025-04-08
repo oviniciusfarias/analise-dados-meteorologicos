@@ -14,7 +14,7 @@ Este programa foi desenvolvido para realizar análises meteorológicas a partir 
 
 ## 📁 Estrutura do Projeto
 
-- `clima_poars.py` → Código-fonte completo e comentado.
+- `clima.py` → Código-fonte completo e comentado.
 - `dados.csv` → Arquivo de dados meteorológicos (você pode renomear ou usar outro, desde que siga o mesmo formato).
 - `README.md` → Este arquivo com instruções e informações do projeto.
 
@@ -35,7 +35,7 @@ Este programa foi desenvolvido para realizar análises meteorológicas a partir 
 Abra o terminal (cmd ou shell) e navegue até a pasta onde está o projeto. Em seguida, rode:
 
 ```bash
-python clima_poars.py
+python clima.py
 ```
 
 ### 3. Informe o nome do arquivo CSV
