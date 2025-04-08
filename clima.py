@@ -4,13 +4,14 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 
 # Solicita ao usuário o nome do arquivo CSV e verifica se ele existe na pasta
+from prompt_toolkit import prompt
+from prompt_toolkit.completion import PathCompleter
+
 def solicitar_arquivo_csv():
+    completer = PathCompleter(file_filter=lambda name: name.endswith('.csv'))
     while True:
-        nome_arquivo = input("Digite o nome do arquivo CSV (ex: dados.csv): ").strip()
-        if not nome_arquivo.endswith('.csv'):
-            print("Por favor, insira um arquivo com extensão .csv")
-            continue
-        if os.path.exists(nome_arquivo):
+        nome_arquivo = prompt("Digite o nome do arquivo CSV: ", completer=completer)
+        if nome_arquivo.endswith('.csv') and os.path.exists(nome_arquivo):
             return nome_arquivo
         else:
             print(f"Arquivo '{nome_arquivo}' não encontrado. Tente novamente.")
