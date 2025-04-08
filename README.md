@@ -1,4 +1,3 @@
-
 # 🌦️ Projeto: Análise de Dados Meteorológicos
 
 ## 💡 Disciplina: Lógica e Programação de Computadores  
@@ -17,6 +16,7 @@ Este programa foi desenvolvido para realizar análises meteorológicas a partir 
 - `clima.py` → Código-fonte completo e comentado.
 - `dados.csv` → Arquivo de dados meteorológicos (você pode renomear ou usar outro, desde que siga o mesmo formato).
 - `README.md` → Este arquivo com instruções e informações do projeto.
+- `requirements.txt` → Lista de dependências do projeto.
 
 ---
 
@@ -25,29 +25,36 @@ Este programa foi desenvolvido para realizar análises meteorológicas a partir 
 ### 1. Pré-requisitos
 
 - Ter o Python 3 instalado.
-- Ter o `matplotlib` instalado (para geração dos gráficos):
+
+### 2. Criar ambiente virtual (opcional, mas recomendado)
+
+```bash
+python -m venv venv
+```
+
+**Ativar ambiente virtual:**
+
+- Windows:
   ```bash
-  pip install matplotlib
+  venv\Scripts\activate
   ```
 
-### 2. Execute o programa
+- macOS/Linux:
+  ```bash
+  source venv/bin/activate
+  ```
 
-Abra o terminal (cmd ou shell) e navegue até a pasta onde está o projeto. Em seguida, rode:
+### 3. Instalar dependências
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Executar o programa
 
 ```bash
 python clima.py
 ```
-
-### 3. Informe o nome do arquivo CSV
-
-Ao iniciar, o programa solicitará o nome do arquivo CSV:
-
-```
-Digite o nome do arquivo CSV (ex: dados.csv):
-```
-
-👉 Se o arquivo estiver na mesma pasta do `.py`, basta digitar `dados.csv`.  
-👉 Se estiver em outro local, digite o caminho relativo (ex: `data/dados.csv`).
 
 ---
 
@@ -92,7 +99,7 @@ Menu:
 ## 👨‍💻 Autor
 
 - Nome: **Vinicius Farias**
-- Curso: Engenharia de Software
+- Curso: Análise e desenvolvimento de software
 - Universidade: PUCRS
 
 ---
@@ -105,3 +112,4 @@ Menu:
 
 ---
 
+### 🚀 Bons estudos e boas análises meteorológicas!
