@@ -7,15 +7,15 @@
 
 ## 📌 Descrição
 
-Este programa foi desenvolvido para realizar análises meteorológicas a partir de dados reais de Porto Alegre (1961 a 2016). A aplicação foi feita em **Python**, com foco no processamento de arquivos CSV e geração de estatísticas e gráficos informativos.
+Este programa foi desenvolvido para realizar análises meteorológicas a partir de dados reais de Porto Alegre (1961 a 2016). A aplicação foi feita em **Python**, com foco no processamento de arquivos CSV, visualização tabular alinhada e geração de gráficos.
 
 ---
 
 ## 📁 Estrutura do Projeto
 
-- `clima.py` → Código-fonte completo e comentado.
-- `dados.csv` → Arquivo de dados meteorológicos (você pode renomear ou usar outro, desde que siga o mesmo formato).
-- `README.md` → Este arquivo com instruções e informações do projeto.
+- `clima.py` → Código-fonte principal e comentado.
+- `dados.csv` → Arquivo de dados meteorológicos (pode ser outro, contanto que siga o mesmo formato).
+- `README.md` → Este arquivo com instruções.
 - `requirements.txt` → Lista de dependências do projeto.
 
 ---
@@ -60,12 +60,14 @@ python clima.py
 
 ## 🧪 Funcionalidades
 
-- ✅ Leitura e validação de dados meteorológicos a partir de arquivos CSV
-- ✅ Visualização de dados filtrados por mês/ano e tipo de informação
-- ✅ Identificação do mês mais chuvoso
-- ✅ Cálculo da média da temperatura mínima de um determinado mês nos últimos 11 anos (2006–2016)
-- ✅ Geração de gráfico de barras com as médias
-- ✅ Cálculo da média geral da temperatura mínima para o mês escolhido
+- ✅ Leitura de arquivos CSV com delimitador vírgula
+- ✅ Autocomplete de caminho de arquivos no terminal (com `prompt_toolkit`)
+- ✅ Visualização tabular com colunas alinhadas
+- ✅ Exibição de dados por intervalo de datas e tipo de medição
+- ✅ Mês mais chuvoso (acumulado de precipitação)
+- ✅ Média de temperatura mínima (2006–2016) para um mês informado
+- ✅ Gráfico com as médias de temperatura mínima
+- ✅ Cálculo da média geral da temperatura mínima do mês
 
 ---
 
@@ -74,10 +76,10 @@ python clima.py
 O arquivo `.csv` deve conter os seguintes campos no cabeçalho:
 
 ```csv
-Data,Precipitacao,TempMaxima,TempMinima,UmidadeRelativa,VelocidadeVento
+data,precip,maxima,minima,um_relativa,vel_vento
 ```
 
-Formato da data: `YYYY-MM-DD`  
+Formato da data: `dd/mm/yyyy`  
 Separador: vírgula (`,`)
 
 ---
@@ -99,7 +101,7 @@ Menu:
 ## 👨‍💻 Autor
 
 - Nome: **Vinicius Farias**
-- Curso: Análise e desenvolvimento de software
+- Curso: Análise e desenvolvimento de sistemas
 - Universidade: PUCRS
 
 ---
@@ -107,9 +109,9 @@ Menu:
 ## 📝 Observações
 
 - O programa ignora automaticamente linhas com dados incompletos ou inválidos.
-- Todos os caminhos para arquivos são tratados de forma **relativa**, conforme exigido no enunciado.
-- O código está documentado com comentários e funções separadas para facilitar leitura e manutenção.
+- Os caminhos para arquivos são tratados de forma **relativa**.
+- As saídas em modo texto são apresentadas com colunas alinhadas para facilitar leitura.
 
 ---
 
-### 🚀 Bons estudos e boas análises meteorológicas!
+### 🚀 Boas análises meteorológicas!
