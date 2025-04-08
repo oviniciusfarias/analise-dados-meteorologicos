@@ -47,23 +47,23 @@ def visualizar_intervalo(dados, mes_inicio, ano_inicio, mes_fim, ano_fim, tipo):
     print(f"\nExibindo dados de {inicio.strftime('%m/%Y')} a {fim.strftime('%m/%Y')}:")
     
     cabecalhos = {
-        1: "Data | Precipitação | Temp Máx | Temp Mín | Umidade | Vento",
-        2: "Data | Precipitação",
-        3: "Data | Temp Máx | Temp Mín",
-        4: "Data | Umidade | Vento"
+        1: f"{'Data':>10} | {'Precipitação':>13} | {'Temp Máx':>8} | {'Temp Mín':>8} | {'Umidade':>7} | {'Vento':>5}",
+        2: f"{'Data':>10} | {'Precipitação':>13}",
+        3: f"{'Data':>10} | {'Temp Máx':>8} | {'Temp Mín':>8}",
+        4: f"{'Data':>10} | {'Umidade':>7} | {'Vento':>5}"
     }
     print(cabecalhos[tipo])
 
     for d in dados:
         if inicio <= d['data'] <= fim:
             if tipo == 1:
-                print(f"{d['data'].strftime('%d/%m/%Y')} | {d['precipitacao']} | {d['temp_max']} | {d['temp_min']} | {d['umidade']} | {d['vento']}")
+                print(f"{d['data'].strftime('%d/%m/%Y'):>10} | {d['precipitacao']:>13.1f} | {d['temp_max']:>8.1f} | {d['temp_min']:>8.1f} | {d['umidade']:>7.1f} | {d['vento']:>5.1f}")
             elif tipo == 2:
-                print(f"{d['data'].strftime('%Y-%m-%d')} | {d['precipitacao']}")
+                print(f"{d['data'].strftime('%d/%m/%Y'):>10} | {d['precipitacao']:>13.1f}")
             elif tipo == 3:
-                print(f"{d['data'].strftime('%Y-%m-%d')} | {d['temp_max']} | {d['temp_min']}")
+                print(f"{d['data'].strftime('%d/%m/%Y'):>10} | {d['temp_max']:>8.1f} | {d['temp_min']:>8.1f}")
             elif tipo == 4:
-                print(f"{d['data'].strftime('%Y-%m-%d')} | {d['umidade']} | {d['vento']}")
+                print(f"{d['data'].strftime('%d/%m/%Y'):>10} | {d['umidade']:>7.1f} | {d['vento']:>5.1f}")
 
 # Retorna o mês/ano com maior volume de precipitação
 def mes_mais_chuvoso(dados):
